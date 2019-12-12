@@ -15,8 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-//        Passport::ignoreMigrations();
         Resource::withoutWrapping();
+        Passport::ignoreMigrations();
 
     }
 
@@ -27,6 +27,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Passport::ignoreMigrations();
     }
 }
