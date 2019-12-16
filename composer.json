@@ -11,9 +11,12 @@
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
         "hyn/multi-tenant": "^5.5",
+        "joselfonseca/lighthouse-graphql-passport-auth": "^2.0",
         "laravel/framework": "^6.2",
         "laravel/passport": "^8.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "mll-lab/laravel-graphql-playground": "^2.0",
+        "nuwave/lighthouse": "^4.7"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
