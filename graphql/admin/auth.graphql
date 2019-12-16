@@ -1,0 +1,51 @@
+input LoginInput {
+    username: String!
+    password: String!
+}
+
+input RefreshTokenInput {
+    refresh_token: String
+}
+
+type AuthPayload {
+    access_token: String!
+    refresh_token: String!
+    expires_in: Int!
+    token_type: String!
+    admin: Admin!
+}
+
+type RefreshTokenPayload {
+    access_token: String!
+    refresh_token: String!
+    expires_in: Int!
+    token_type: String!
+}
+
+type LogoutResponse {
+    status: String!
+    message: String
+}
+
+type ForgotPasswordResponse {
+    status: String!
+    message: String
+}
+
+input ForgotPasswordInput {
+    email: String! @rules(apply: ["required", "email"])
+}
+
+input NewPasswordWithCodeInput {
+    email: String! @rules(apply: ["required", "email"])
+    token: String! @rules(apply: ["required", "string"])
+    password: String! @rules(apply: ["required", "confirmed", "min:8"])
+    password_confirmation: String!
+}
+
+input RegisterInput {
+    name: String! @rules(apply: ["required", "string"])
+    email: String! @rules(apply: ["required", "email"])
+    password: String! @rules(apply: ["required", "confirmed", "min:8"])
+    password_confirmation: String!
+}
