@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use App\Tenant;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -41,6 +41,8 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        $this->middleware('guest:admin')->except('logout');
+        $this->middleware('guest:customer')->except('logout');
     }
 
     /**
