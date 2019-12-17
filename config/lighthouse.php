@@ -122,7 +122,7 @@ return [
     |
     */
 
-    'paginate_max_count' => null,
+    'paginate_max_count' => 10,
 
     /*
     |--------------------------------------------------------------------------
@@ -198,7 +198,6 @@ return [
     | wrapped in a transaction to ensure atomicity.
     |
     */
-
     'transactional_mutations' => true,
 
     /*

@@ -1,0 +1,25 @@
+{
+    "name": "ecomerce/product",
+    "description": "",
+    "authors": [
+        {
+            "name": "Alfred Koncsag",
+            "email": "koncsagalfred@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Product\\Providers\\ProductServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Product\\": ""
+        }
+    }
+}

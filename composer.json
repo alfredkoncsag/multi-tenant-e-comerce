@@ -16,7 +16,8 @@
         "laravel/passport": "^8.0",
         "laravel/tinker": "^1.0",
         "mll-lab/laravel-graphql-playground": "^2.0",
-        "nuwave/lighthouse": "^4.7"
+        "nuwave/lighthouse": "^4.7",
+        "nwidart/laravel-modules": "^6.2"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
@@ -38,7 +39,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Modules\\": "Modules/"
         },
         "classmap": [
             "database/seeds",
