@@ -1,0 +1,10 @@
+extend type Query {
+    products: [Product!]! @paginate(defaultCount: 10)
+    # admins: [Admin!]! @paginate(defaultCount: 10)
+}
+
+type Product {
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+}

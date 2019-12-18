@@ -5,9 +5,10 @@ scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
 type Query {
-    admins: [Admin!]! @paginate(defaultCount: 10)
+    # admins: [Admin!]! @paginate(defaultCount: 10)
     admin(id: ID @eq): Admin @find
     me: Admin @auth
+    admins: [Admin!]! @paginate(defaultCount: 10)
 }
 
 type Admin {
