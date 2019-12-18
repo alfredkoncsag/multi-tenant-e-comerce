@@ -55,6 +55,7 @@ class Tenant
         app(Environment::class)->tenant($website);
 
         Artisan::call('passport:install');
+        Artisan::call('module:migrate Product');
 
         return new Tenant($website, $hostname);
     }
